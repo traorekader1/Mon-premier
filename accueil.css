@@ -1,0 +1,240 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NAVBAR */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  margin: 40px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#AC {
+  color: red;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav ul a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: red;
+  transition: 0.3s;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+/* SECTION 1 : présentation */
+.S0 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.N0 {
+  width: 45%;
+  min-width: 320px;
+}
+
+.N0 h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: gray;
+  animation: fadeIn 2s ease forwards;
+}
+
+.N0 b {
+  display: block;
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+  animation: fadeInUp 2.5s ease forwards;
+}
+
+.N0 p {
+  margin-top: 20px;
+  color: gray;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  animation: slideLeft 2s ease forwards;
+}
+
+.N0 a {
+  display: inline-block;
+  margin-top: 30px;
+  color: red;
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid red;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.N0 a:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0 4px 12px red;
+}
+
+.moi img {
+  border-radius: 50%;
+  border: 2px solid red;
+  box-shadow: 0 0 25px red;
+  width: 350px;
+  animation: photo 2s ease forwards;
+  transition: 2s;
+}
+
+.moi img:hover {
+  box-shadow: 0 0 80px red;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes photo {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* SECTION 2 : cartes */
+.S1 {
+  margin-top: 100px;
+  padding: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px red;
+  padding: 20px;
+  height: auto;
+  transition: transform 3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 2s ease forwards;
+}
+
+.card:hover {
+  transform: scale(2.5);
+  box-shadow: 0 16px 32px red;
+}
+
+.card h2 {
+  color: white;
+  text-shadow: 0 2px 6px red;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.card p {
+  color: gray;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  background-color: #111;
+  padding: 60px 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+footer ul a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+footer ul a:hover {
+  color: red;
+}
+
+footer p {
+  color: gray;
+  font-size: 16px;
+}

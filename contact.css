@@ -1,0 +1,169 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 4px red;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: gray;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  border-radius: 8px;
+  padding: 5px;
+}
+
+nav ion-icon {
+  font-size: 22px;
+  color: white;
+  transition: tranform 0.3s ease;
+  text-align: center;
+}
+
+nav a span {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  margin-left: 8px;
+  color: white;
+  transition: transform 0.3s ease;
+  animation: pas 3s ease forwards;
+}
+nav a:hover span {
+  max-width: 200px;
+  opacity: 1;
+  animation: texs 2s ease forwards;
+  transition: all 3s ease;
+}
+@keyframes texs {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*FORMULAIRE*/
+
+.form {
+  background-color: rgba(15, 14, 14, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  text-align: center;
+  flex-direction: column;
+  box-shadow: 0 0 15px red;
+}
+
+h2 {
+  color: red;
+  font-weight: 800;
+  font-size: xx-large;
+}
+
+input[type="text"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: 0 0 15px red;
+  color: white;
+}
+
+input[type="tel"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: 0 0 15px red;
+  color: white;
+}
+
+input[type="tel"]::placeholder {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: 0 0 15px red;
+  color: white;
+}
+
+textarea::placeholder {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"]::placeholder {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.conn {
+  display: flex;
+  justify-content: space-between;
+  font-size: medium;
+  margin: 17px 0;
+}
+
+.conn a {
+  color: white;
+  text-decoration: none;
+}
+
+#mat {
+  color: red;
+  cursor: pointer;
+}
+
+#boton {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: black;
+  font-weight: 700;
+  font-size: large;
+  cursor: pointer;
+}
+
+#boton:hover {
+  transform: scale(1.05);
+}
